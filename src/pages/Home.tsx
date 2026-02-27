@@ -16,7 +16,7 @@ export default function Home() {
                 className="w-full h-full object-contain" 
               />
             </div>
-            <span className="text-lg font-bold tracking-tight">Enchanted Systems</span>
+            <span className="text-lg font-bold tracking-tight">Enchanted Systems AI Ltd</span>
           </div>
           <div className="flex items-center gap-6 text-sm">
             <Link to="/privacy" className="text-slate-400 hover:text-white transition-colors">Studio Policy</Link>
