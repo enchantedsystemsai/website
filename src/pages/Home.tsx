@@ -6,9 +6,16 @@ export default function Home() {
     <div className="min-h-screen bg-slate-950 text-slate-100 selection:bg-blue-500/30">
       {/* Navigation */}
       <nav className="border-b border-slate-800/60 sticky top-0 z-50 bg-slate-950/80 backdrop-blur-md">
-        <div className="max-w-5xl mx-auto px-6 py-5 flex items-center justify-between">
+        <div className="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <img src="/assets/EnchantedSystems_nobackground.png" alt="Enchanted Systems Logo" className="w-8 h-8 object-contain" />
+            {/* Logo in a white circle */}
+            <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center p-1.5 shadow-md">
+              <img 
+                src="/assets/EnchantedSystems_nobackground.png" 
+                alt="Enchanted Systems Logo" 
+                className="w-full h-full object-contain" 
+              />
+            </div>
             <span className="text-lg font-bold tracking-tight">Enchanted Systems</span>
           </div>
           <div className="flex items-center gap-6 text-sm">
