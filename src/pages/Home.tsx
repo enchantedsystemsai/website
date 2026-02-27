@@ -4,6 +4,19 @@ import { Package, ArrowRight } from 'lucide-react';
 export default function Home() {
   return (
     <div className="min-h-screen bg-slate-950 text-slate-100 selection:bg-blue-500/30">
+      {/* Navigation */}
+      <nav className="border-b border-slate-800/60 sticky top-0 z-50 bg-slate-950/80 backdrop-blur-md">
+        <div className="max-w-5xl mx-auto px-6 py-5 flex items-center justify-between">
+          <div className="flex items-center gap-3">
+            <img src="/assets/EnchantedSystems_nobackground.png" alt="Enchanted Systems Logo" className="w-8 h-8 object-contain" />
+            <span className="text-lg font-bold tracking-tight">Enchanted Systems</span>
+          </div>
+          <div className="flex items-center gap-6 text-sm">
+            <Link to="/privacy" className="text-slate-400 hover:text-white transition-colors">Studio Policy</Link>
+          </div>
+        </div>
+      </nav>
+
       {/* Hero Section */}
       <section className="max-w-5xl mx-auto px-6 pt-24 pb-32">
         <h1 className="text-5xl md:text-6xl font-extrabold tracking-tighter mb-6">
@@ -20,25 +33,17 @@ export default function Home() {
         <div className="flex items-center gap-2 text-sm font-semibold text-blue-500 uppercase tracking-widest mb-12">
           <Package className="w-4 h-4" /> Current Projects
         </div>
+        
         <div className="grid gap-6">
           {/* NoteCompass AI Card */}
           <div className="group bg-slate-900 border border-slate-800 rounded-2xl p-8 hover:border-slate-600 transition-all">
             <div className="flex flex-col md:flex-row md:items-start gap-6 mb-6">
-              {/* White Circle Container for Logo */}
-              <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center p-2 shadow-lg shrink-0 overflow-hidden">
-                <img
-                  src="/assets/logo-notecompass.png"
-                  alt="NoteCompass AI Logo"
-                  className="w-full h-full object-contain"
-                />
-              </div>
+              <img src="/assets/logo-notecompass.png" alt="NoteCompass AI Logo" className="w-16 h-16 rounded-xl object-contain bg-slate-800" />
               <div className="flex-grow">
                 <h3 className="text-2xl font-bold mb-2">NoteCompass AI</h3>
-                <span className="text-sm bg-blue-500/10 text-blue-400 px-3 py-1 rounded-full border border-blue-500/20">
-                  Productivity / AI
-                </span>
+                <span className="text-sm bg-blue-500/10 text-blue-400 px-3 py-1 rounded-full border border-blue-500/20">Productivity / AI</span>
               </div>
-              <Link
+              <Link 
                 to="/notecompass"
                 className="bg-white text-slate-950 px-4 py-2 rounded-lg font-bold text-sm flex items-center gap-2 hover:bg-slate-200 transition-colors"
               >
@@ -55,7 +60,9 @@ export default function Home() {
       {/* Footer */}
       <footer className="border-t border-slate-900/60 py-12">
         <div className="max-w-5xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
-          <p className="text-slate-500 text-sm font-medium">© 2026 Enchanted Systems AI Ltd.</p>
+          <p className="text-slate-500 text-sm font-medium">
+            © 2026 Enchanted Systems AI Ltd.
+          </p>
           <div className="flex gap-8 text-sm text-slate-500">
             <a href="mailto:enchantedsys@gmail.com" className="hover:text-white transition-colors">Support</a>
             <Link to="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link>
