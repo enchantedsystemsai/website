@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Package, ArrowRight, Shield, Zap } from 'lucide-react';
+import { Package, ArrowRight } from 'lucide-react';
 
 export default function Home() {
   return (
@@ -7,10 +7,8 @@ export default function Home() {
       {/* Navigation */}
       <nav className="border-b border-slate-800/60 sticky top-0 z-50 bg-slate-950/80 backdrop-blur-md">
         <div className="max-w-5xl mx-auto px-6 py-5 flex items-center justify-between">
-          <div className="flex items-center gap-2">
-            <div className="bg-blue-600 p-1.5 rounded-lg">
-              <Zap className="w-5 h-5 text-white" />
-            </div>
+          <div className="flex items-center gap-3">
+            <img src="/assets/EnchantedSystems_nobackground.png" alt="Enchanted Systems Logo" className="w-8 h-8 object-contain" />
             <span className="text-lg font-bold tracking-tight">Enchanted Systems</span>
           </div>
           <div className="flex items-center gap-6 text-sm">
@@ -26,7 +24,7 @@ export default function Home() {
           <span className="text-blue-500">the modern era.</span>
         </h1>
         <p className="text-xl text-slate-400 max-w-xl leading-relaxed">
-          Enchanted Systems is a boutique software studio dedicated to building high-fidelity productivity tools that work exactly as expected.
+          Enchanted Systems AI Ltd is a boutique software studio dedicated to building high-fidelity productivity tools that work exactly as expected.
         </p>
       </section>
 
@@ -39,8 +37,9 @@ export default function Home() {
         <div className="grid gap-6">
           {/* NoteCompass AI Card */}
           <div className="group bg-slate-900 border border-slate-800 rounded-2xl p-8 hover:border-slate-600 transition-all">
-            <div className="flex justify-between items-start mb-6">
-              <div>
+            <div className="flex flex-col md:flex-row md:items-start gap-6 mb-6">
+              <img src="/assets/logo-notecompass.png" alt="NoteCompass AI Logo" className="w-16 h-16 rounded-xl object-contain bg-slate-800" />
+              <div className="flex-grow">
                 <h3 className="text-2xl font-bold mb-2">NoteCompass AI</h3>
                 <span className="text-sm bg-blue-500/10 text-blue-400 px-3 py-1 rounded-full border border-blue-500/20">Productivity / AI</span>
               </div>
@@ -54,11 +53,6 @@ export default function Home() {
             <p className="text-slate-400 max-w-2xl leading-relaxed">
               A high-fidelity audio note-taker that bridges the gap between thoughts and action. Built for professionals who need structured intelligence from every meeting.
             </p>
-          </div>
-          
-          {/* Placeholder for future app - easily clone this div for the next one */}
-          <div className="bg-slate-900/30 border border-dashed border-slate-800 rounded-2xl p-8 text-center py-16">
-            <p className="text-slate-500">New tools currently in development.</p>
           </div>
         </div>
       </section>
