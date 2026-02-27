@@ -1,0 +1,82 @@
+import { Link } from 'react-router-dom';
+import { Sparkles, ArrowLeft } from 'lucide-react';
+
+export default function NoteCompassTerms() {
+  return (
+    <div className="min-h-screen bg-slate-950 text-white">
+      <nav className="border-b border-slate-800/50 backdrop-blur-sm sticky top-0 z-50 bg-slate-950/80">
+        <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+          <Link to="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
+            <Sparkles className="w-6 h-6 text-blue-400" />
+            <span className="text-xl font-semibold">Enchanted Systems</span>
+          </Link>
+          <div className="flex items-center gap-6">
+            <Link
+              to="/notecompass"
+              className="text-sm text-slate-400 hover:text-white transition-colors"
+            >
+              NoteCompass
+            </Link>
+            <Link
+              to="/notecompass/privacy"
+              className="text-sm text-slate-400 hover:text-white transition-colors"
+            >
+              Privacy
+            </Link>
+          </div>
+        </div>
+      </nav>
+
+      <div className="max-w-4xl mx-auto px-6 py-16">
+        <Link
+          to="/notecompass"
+          className="inline-flex items-center gap-2 text-slate-400 hover:text-white transition-colors mb-8"
+        >
+          <ArrowLeft className="w-4 h-4" />
+          Back to NoteCompass
+        </Link>
+
+        <div className="bg-gradient-to-br from-slate-900/50 to-slate-800/50 border border-slate-700/50 rounded-3xl p-12">
+          <h1 className="text-4xl md:text-5xl font-bold mb-6">Terms of Service</h1>
+          <p className="text-slate-400 text-lg mb-12">
+            NoteCompass AI by Enchanted Systems
+          </p>
+
+          <div className="prose prose-invert prose-slate max-w-none">
+            <p className="text-lg text-slate-300 leading-relaxed">
+              These are the Terms of Service for NoteCompass AI by Enchanted Systems.
+              Please read them carefully before using the application.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <footer className="border-t border-slate-800/50 mt-24">
+        <div className="max-w-7xl mx-auto px-6 py-12">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+            <div className="flex items-center gap-2">
+              <Sparkles className="w-5 h-5 text-blue-400" />
+              <span className="font-semibold">NoteCompass AI</span>
+              <span className="text-slate-600 mx-2">•</span>
+              <span className="text-slate-400 text-sm">by Enchanted Systems</span>
+            </div>
+            <div className="flex items-center gap-6">
+              <Link
+                to="/notecompass/privacy"
+                className="text-sm text-slate-400 hover:text-white transition-colors"
+              >
+                Privacy Policy
+              </Link>
+              <Link
+                to="/notecompass/terms"
+                className="text-sm text-slate-400 hover:text-white transition-colors"
+              >
+                Terms of Service
+              </Link>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  );
+}
