@@ -132,21 +132,6 @@ export default function NoteCompass() {
         </div>
       </section>
 
-      <section className="max-w-7xl mx-auto px-6 py-24">
-        <div className="bg-gradient-to-br from-blue-500/10 to-purple-500/10 border border-blue-500/20 rounded-3xl p-12 md:p-16 text-center">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Be the First to Experience NoteCompass
-          </h2>
-          <p className="text-xl text-slate-300 mb-10 max-w-2xl mx-auto">
-            Join our waitlist to get early access and exclusive launch updates
-          </p>
-          <button className="inline-flex items-center gap-3 px-8 py-4 bg-white text-slate-950 hover:bg-slate-100 rounded-xl font-semibold text-lg transition-all duration-200 shadow-lg group">
-            Join the Waitlist
-            <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-          </button>
-        </div>
-      </section>
-
       <footer className="border-t border-slate-800/50 mt-24">
         <div className="max-w-7xl mx-auto px-6 py-12">
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">
