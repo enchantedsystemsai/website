@@ -34,11 +34,6 @@ export default function NoteCompass() {
           </div>
         </div>
       </nav>
-      {/* Your content sections go here */}
-    </div>
-  );
-}
-
       <section className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-purple-500/5 to-transparent pointer-events-none" />
         <div className="max-w-7xl mx-auto px-6 py-24 md:py-32 relative">
