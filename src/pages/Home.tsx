@@ -47,11 +47,14 @@ export default function Home() {
 
       {/* White container behind logo */}
       <div className="w-20 h-20 bg-white rounded-2xl flex items-center justify-center">
-        <img
-          src="/assets/logo-notecompass.png"
-          alt="NoteCompass AI Logo"
-          className="w-12 h-12 object-contain"
-        />
+<div className="w-20 h-20 bg-white rounded-2xl flex items-center justify-center">
+  <img
+    src="/assets/logo-notecompass.png"
+    alt="NoteCompass AI Logo"
+    className="w-12 h-12 object-contain"
+  />
+</div>
+
       </div>
 
       <div className="flex-grow">
