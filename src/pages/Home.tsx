@@ -26,7 +26,6 @@ export default function Home() {
         </div>
       </section>
 
-
       {/* Hero Section */}
       <section className="max-w-5xl mx-auto px-6 pt-24 pb-32">
         <h1 className="text-5xl md:text-6xl font-extrabold tracking-tighter mb-6">
