@@ -45,11 +45,13 @@ export default function Home() {
   {/* NoteCompass AI Card */}
   <div className="group bg-slate-900 border border-slate-800 rounded-2xl p-8 hover:border-slate-600 transition-all">
     <div className="flex flex-col md:flex-row md:items-start gap-6 mb-6">
-      <img 
-        src="/assets/logo-notecompass.png" 
-        alt="NoteCompass AI Logo" 
-        className="w-16 h-16 rounded-xl object-contain bg-white" 
-      />
+      <div className="bg-white rounded-2xl p-3 flex items-center justify-center">
+        <img
+          src="/assets/logo-notecompass.png"
+          alt="NoteCompass AI Logo"
+          className="w-16 h-16 object-contain"
+        />
+      </div>
       <div className="flex-grow">
         <h3 className="text-2xl font-bold mb-2">NoteCompass AI</h3>
         <span className="text-sm bg-blue-500/10 text-blue-400 px-3 py-1 rounded-full border border-blue-500/20">
@@ -68,6 +70,7 @@ export default function Home() {
     </p>
   </div>
 </div>
+
 
       </section>
 
