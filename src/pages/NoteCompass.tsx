@@ -10,15 +10,22 @@ import {
 } from 'lucide-react';
 
 export default function NoteCompass() {
-  return (
-    <div className="min-h-screen bg-slate-950 text-white">
-      <nav className="border-b border-slate-800/50 backdrop-blur-sm sticky top-0 z-50 bg-slate-950/80">
-        <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-          <Link to="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
-            <Sparkles className="w-6 h-6 text-blue-400" />
-            <span className="text-xl font-semibold">Enchanted Systems</span>
-          </Link>
-          <div className="flex items-center gap-6">
+    return (
+    <div className="min-h-screen bg-slate-950 text-slate-100 selection:bg-blue-500/30">
+      <nav className="border-b border-slate-800/60 sticky top-0 z-50 bg-slate-950/80 backdrop-blur-md">
+        <div className="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
+          <div className="flex items-center gap-3">
+            {/* Logo in a white circle */}
+            <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center p-1.5 shadow-md">
+              <img 
+                src="/assets/EnchantedSystems_nobackground.png" 
+                alt="Enchanted Systems Logo" 
+                className="w-full h-full object-contain" 
+              />
+            </div>
+            <span className="text-lg font-bold tracking-tight">Enchanted Systems AI Ltd</span>
+          </div>
+          <div className="flex items-center gap-6 text-sm">
             <Link
               to="/notecompass/privacy"
               className="text-sm text-slate-400 hover:text-white transition-colors"
