@@ -137,10 +137,10 @@ export default function NoteCompass() {
             <div className="w-12 h-12 bg-cyan-500/10 rounded-2xl flex items-center justify-center mb-6 border border-cyan-500/20">
               <Cloud className="w-6 h-6 text-cyan-400" />
             </div>
-            <h3 className="text-2xl font-bold mb-4">Secure Cloud Sync</h3>
+            <h3 className="text-2xl font-bold mb-4">Image to Text</h3>
             <p className="text-slate-400 leading-relaxed">
-              Access your notes anywhere with encrypted cloud synchronization. Your data
-              is always secure and available across all your devices.
+              Image to Text
+              Description
             </p>
           </div>
         </div>
