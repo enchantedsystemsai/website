@@ -4,7 +4,7 @@ import {
   FileText,
   CheckSquare,
   Mic,
-  Cloud,
+  Image,
   ArrowRight,
   Smartphone,
 } from 'lucide-react';
@@ -135,7 +135,7 @@ export default function NoteCompass() {
 
           <div className="bg-gradient-to-br from-slate-900/50 to-slate-800/50 border border-slate-700/50 rounded-3xl p-8 hover:border-cyan-500/50 transition-all duration-300">
             <div className="w-12 h-12 bg-cyan-500/10 rounded-2xl flex items-center justify-center mb-6 border border-cyan-500/20">
-              <Cloud className="w-6 h-6 text-cyan-400" />
+              <Image className="w-6 h-6 text-cyan-400" />
             </div>
             <h3 className="text-2xl font-bold mb-4">Image to Text</h3>
             <p className="text-slate-400 leading-relaxed">
