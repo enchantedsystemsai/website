@@ -150,12 +150,12 @@ export default function NoteCompass() {
   <div className="max-w-7xl mx-auto px-6 py-12">
     <div className="flex flex-col md:flex-row items-center justify-between gap-6">
       <div className="flex items-center gap-2">
-        {/* New Logo Container */}
-        <div className="h-8">
+        {/* White Circle Logo Container */}
+        <div className="h-9 w-9 bg-white rounded-full flex items-center justify-center p-1">
           <img 
             src="/assets/EnchantedSystems_nobackground.png" 
             alt="Enchanted Systems Logo" 
-            className="w-full h-full object-contain" 
+            className="max-h-full max-w-full object-contain" 
           />
         </div>
         <span className="text-slate-600 mx-2">•</span>
