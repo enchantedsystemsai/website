@@ -1,26 +1,18 @@
 import { Link } from 'react-router-dom';
-import { ArrowLeft } from 'lucide-react';
+import { Sparkles, ArrowLeft } from 'lucide-react';
 
 export default function StudioPrivacy() {
   return (
     <div className="min-h-screen bg-slate-950 text-white">
-      {/* Navigation */}
       <nav className="border-b border-slate-800/50 backdrop-blur-sm sticky top-0 z-50 bg-slate-950/80">
         <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-          <Link to="/" className="flex items-center hover:opacity-80 transition-opacity">
-            {/* Logo Container */}
-            <div className="h-8">
-              <img 
-                src="/assets/EnchantedSystems_nobackground.png" 
-                alt="Enchanted Systems Logo" 
-                className="w-full h-full object-contain" 
-              />
-            </div>
+          <Link to="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
+            <Sparkles className="w-6 h-6 text-blue-400" />
+            <span className="text-xl font-semibold">Enchanted Systems</span>
           </Link>
         </div>
       </nav>
 
-      {/* Main Content */}
       <div className="max-w-4xl mx-auto px-6 py-16">
         <Link
           to="/"
@@ -45,18 +37,11 @@ export default function StudioPrivacy() {
         </div>
       </div>
 
-      {/* Footer */}
       <footer className="border-t border-slate-800/50 mt-24">
         <div className="max-w-7xl mx-auto px-6 py-12 text-center">
-          <div className="flex items-center justify-center mb-4">
-            {/* Footer Logo Container */}
-            <div className="h-10">
-              <img 
-                src="/assets/EnchantedSystems_nobackground.png" 
-                alt="Enchanted Systems Logo" 
-                className="w-full h-full object-contain" 
-              />
-            </div>
+          <div className="flex items-center justify-center gap-2 mb-4">
+            <Sparkles className="w-5 h-5 text-blue-400" />
+            <span className="font-semibold">Enchanted Systems</span>
           </div>
           <p className="text-slate-400 text-sm">
             © 2026 Enchanted Systems AI Ltd. All rights reserved.
