@@ -146,32 +146,38 @@ export default function NoteCompass() {
         </div>
       </section>
 
-      <footer className="border-t border-slate-800/50 mt-24">
-        <div className="max-w-7xl mx-auto px-6 py-12">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-            <div className="flex items-center gap-2">
-              <Sparkles className="w-5 h-5 text-blue-400" />
-              <span className="font-semibold">NoteCompass AI</span>
-              <span className="text-slate-600 mx-2">•</span>
-              <span className="text-slate-400 text-sm">by Enchanted Systems</span>
-            </div>
-            <div className="flex items-center gap-6">
-              <Link
-                to="/notecompass/privacy"
-                className="text-sm text-slate-400 hover:text-white transition-colors"
-              >
-                Privacy Policy
-              </Link>
-              <Link
-                to="/notecompass/terms"
-                className="text-sm text-slate-400 hover:text-white transition-colors"
-              >
-                Terms of Service
-              </Link>
-            </div>
-          </div>
+<footer className="border-t border-slate-800/50 mt-24">
+  <div className="max-w-7xl mx-auto px-6 py-12">
+    <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+      <div className="flex items-center gap-2">
+        {/* New Logo Container */}
+        <div className="h-8">
+          <img 
+            src="/assets/EnchantedSystems_nobackground.png" 
+            alt="Enchanted Systems Logo" 
+            className="w-full h-full object-contain" 
+          />
         </div>
-      </footer>
+        <span className="text-slate-600 mx-2">•</span>
+        <span className="text-slate-400 text-sm">by Enchanted Systems</span>
+      </div>
+      <div className="flex items-center gap-6">
+        <Link
+          to="/notecompass/privacy"
+          className="text-sm text-slate-400 hover:text-white transition-colors"
+        >
+          Privacy Policy
+        </Link>
+        <Link
+          to="/notecompass/terms"
+          className="text-sm text-slate-400 hover:text-white transition-colors"
+        >
+          Terms of Service
+        </Link>
+      </div>
+    </div>
+  </div>
+</footer>
     </div>
   );
 }
