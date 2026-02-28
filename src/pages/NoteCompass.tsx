@@ -152,14 +152,14 @@ export default function NoteCompass() {
       <div className="flex items-center gap-2">
         {/* White Circle Logo Container */}
         <div className="h-9 w-9 bg-white rounded-full flex items-center justify-center p-1">
-          <img 
-            src="/assets/EnchantedSystems_nobackground.png" 
-            alt="Enchanted Systems Logo" 
-            className="max-h-full max-w-full object-contain" 
-          />
+        <img 
+          src="/assets/logo-notecompass.png" 
+          alt="NoteCompass AI Logo" 
+          className="w-full h-full object-contain" 
+        />
         </div>
         <span className="text-slate-600 mx-2">•</span>
-        <span className="text-slate-400 text-sm">by Enchanted Systems</span>
+        <span className="text-slate-400 text-sm">by Enchanted Systems AI Ltd</span>
       </div>
       <div className="flex items-center gap-6">
         <Link
