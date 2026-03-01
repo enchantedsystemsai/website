@@ -1,183 +1,102 @@
 import { Link } from 'react-router-dom';
-import {
-  Sparkles,
-  FileText,
-  CheckSquare,
-  Mic,
-  Image,
-  ArrowRight,
-  Smartphone,
-} from 'lucide-react';
+import { Sparkles, FileText, CheckSquare, Mic, Image, ArrowRight, Smartphone, ScanFace } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 export default function NoteCompass() {
-    return (
+  return (
     <div className="min-h-screen bg-slate-950 text-slate-100 selection:bg-blue-500/30">
-{/* Navigation */}
       <nav className="border-b border-slate-800/60 sticky top-0 z-50 bg-slate-950/80 backdrop-blur-md">
         <div className="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
-   <Link 
-      to="/" 
-      className="flex items-center gap-3 group"
-    >
-      {/* Logo in a white circle */}
-      <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center p-1.5 shadow-md transition-colors group-hover:bg-blue-100">
-        <img 
-          src="/assets/EnchantedSystems_nobackground.png" 
-          alt="Enchanted Systems Logo" 
-          className="w-full h-full object-contain" 
-        />
-      </div>
-
-      <span className="text-lg font-bold tracking-tight">
-        Enchanted Systems AI Ltd
-      </span>
-    </Link>
-          <div className="flex items-center gap-6 text-sm">
-            <Link
-              to="/notecompass/privacy"
-              className="text-sm text-slate-400 hover:text-white transition-colors"
-            >
-              Privacy
-            </Link>
-            <Link
-              to="/notecompass/terms"
-              className="text-sm text-slate-400 hover:text-white transition-colors"
-            >
-              Terms
-            </Link>
+          <Link to="/" className="flex items-center gap-3 group">
+            <div className="w-10 h-10 bg-white rounded-xl flex items-center justify-center p-1.5 shadow-xl transition-all">
+              <img src="/assets/EnchantedSystems_nobackground.png" alt="Logo" className="w-full h-full object-contain" />
+            </div>
+            <span className="text-lg font-black tracking-tight hidden sm:block">Enchanted Systems</span>
+          </Link>
+          <div className="flex items-center gap-6">
+            <Link to="/notecompass/privacy" className="text-[11px] font-black uppercase tracking-widest text-slate-400 hover:text-white transition-colors">Privacy</Link>
+            <Link to="/notecompass/terms" className="text-[11px] font-black uppercase tracking-widest text-slate-400 hover:text-white transition-colors">Terms</Link>
           </div>
         </div>
       </nav>
 
-      <section className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-purple-500/5 to-transparent pointer-events-none" />
-        <div className="max-w-7xl mx-auto px-6 py-24 md:py-32 relative">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <div className="inline-flex items-center gap-2 mb-6 px-3 py-1 bg-blue-500/10 border border-blue-500/20 rounded-full text-blue-400 text-sm font-medium">
-                Coming Soon
+      <section className="relative overflow-hidden pt-24 pb-32">
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-600/10 via-transparent to-transparent pointer-events-none" />
+        <div className="max-w-6xl mx-auto px-6 relative">
+          <div className="grid lg:grid-cols-2 gap-20 items-center">
+            <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }}>
+              <div className="inline-flex items-center gap-2 mb-8 px-4 py-1.5 bg-blue-500/10 border border-blue-500/20 rounded-full text-blue-400 text-xs font-black uppercase tracking-widest">
+                <Sparkles className="w-3 h-3" /> Coming Soon to Android
               </div>
-              <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
-                NoteCompass AI
+              <h1 className="text-6xl md:text-7xl font-black mb-8 leading-[0.9] tracking-tighter">
+                NoteCompass <span className="text-blue-500">AI</span>
               </h1>
-              <p className="text-2xl text-slate-300 mb-8 leading-relaxed">
-                Transforming Audio into Actionable Insights
+              <p className="text-xl text-slate-400 mb-10 leading-relaxed font-medium">
+                Transforming Audio into Actionable Insights. Record, transcribe, and organize your thoughts with high-fidelity intelligence.
               </p>
-              <p className="text-lg text-slate-400 mb-10 leading-relaxed">
-                Record, transcribe, and organize your thoughts with the power of AI.
-                NoteCompass turns your audio recordings into searchable notes,
-                intelligent summaries, and actionable checklists.
-              </p>
-              <button className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-500 hover:to-blue-400 rounded-xl font-semibold text-lg transition-all duration-200 shadow-lg shadow-blue-500/25 group">
-                Coming Soon to Play Store
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </button>
-            </div>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <button className="px-8 py-4 bg-blue-600 hover:bg-blue-500 rounded-2xl font-black text-xs uppercase tracking-widest transition-all shadow-xl shadow-blue-500/20 flex items-center justify-center gap-3">
+                  Google Play Store <ArrowRight className="w-4 h-4" />
+                </button>
+              </div>
+            </motion.div>
 
-            <div className="relative">
-              <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-purple-500/20 blur-3xl rounded-full" />
-              <div className="relative bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-slate-700/50 rounded-[3rem] p-8 shadow-2xl">
-                <div className="aspect-[9/19] bg-slate-950 rounded-[2.5rem] border-8 border-slate-800 overflow-hidden shadow-inner">
-                  <div className="bg-gradient-to-br from-blue-500/10 to-purple-500/10 h-full flex flex-col items-center justify-center p-8">
-                    <Smartphone className="w-24 h-24 text-blue-400 mb-6" />
-                    <div className="space-y-4 w-full">
-                      <div className="h-3 bg-blue-400/20 rounded-full w-3/4 mx-auto" />
-                      <div className="h-3 bg-blue-400/20 rounded-full w-full" />
-                      <div className="h-3 bg-blue-400/20 rounded-full w-2/3 mx-auto" />
-                    </div>
-                  </div>
+            <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} className="relative flex justify-center lg:justify-end">
+              <div className="absolute inset-0 bg-blue-500/20 blur-[100px] rounded-full" />
+              {/* Phone Frame */}
+              <div className="relative w-[280px] h-[580px] bg-slate-900 border-[8px] border-slate-800 rounded-[3rem] shadow-2xl overflow-hidden">
+                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-6 bg-slate-800 rounded-b-2xl z-20" />
+                <div className="h-full w-full bg-slate-950 p-6 flex flex-col gap-4 pt-12">
+                   <div className="h-8 w-32 bg-slate-900 rounded-lg animate-pulse" />
+                   <div className="h-40 w-full bg-blue-500/10 border border-blue-500/20 rounded-2xl flex items-center justify-center">
+                      <Mic className="w-10 h-10 text-blue-500 animate-bounce" />
+                   </div>
+                   <div className="space-y-3 pt-4">
+                      <div className="h-3 w-full bg-slate-900 rounded-full" />
+                      <div className="h-3 w-full bg-slate-900 rounded-full" />
+                      <div className="h-3 w-2/3 bg-slate-900 rounded-full" />
+                   </div>
                 </div>
               </div>
-            </div>
+            </motion.div>
           </div>
         </div>
       </section>
 
-      <section className="max-w-7xl mx-auto px-6 py-24">
-        <h2 className="text-4xl font-bold mb-4 text-center">Powerful Features</h2>
-        <p className="text-slate-400 text-center mb-16 text-lg max-w-2xl mx-auto">
-          Everything you need to capture, organize, and act on your ideas
-        </p>
-
-        <div className="grid md:grid-cols-2 gap-6">
-          <div className="bg-gradient-to-br from-slate-900/50 to-slate-800/50 border border-slate-700/50 rounded-3xl p-8 hover:border-blue-500/50 transition-all duration-300">
-            <div className="w-12 h-12 bg-blue-500/10 rounded-2xl flex items-center justify-center mb-6 border border-blue-500/20">
-              <FileText className="w-6 h-6 text-blue-400" />
+      <section className="max-w-6xl mx-auto px-6 py-32">
+        <h2 className="text-4xl font-black mb-16 text-center tracking-tight">Intelligence for every input.</h2>
+        <div className="grid md:grid-cols-2 gap-8">
+          {[
+            { icon: FileText, title: "AI Summaries", color: "blue", desc: "Get instant, intelligent summaries of your recordings. Our AI extracts key points and insights, saving you hours of review time." },
+            { icon: CheckSquare, title: "Checklist Mode", color: "purple", desc: "Automatically generate actionable checklists from your notes. Stay organized and never miss a follow-up task." },
+            { icon: Mic, title: "Hi-Fi Capture", color: "emerald", desc: "Record crystal-clear audio with advanced noise reduction. Perfect for meetings, interviews, and deep thought sessions." },
+            { icon: ScanFace, title: "OCR Engine", color: "cyan", desc: "Instantly digitize handwritten notes or whiteboards. Our scanning engine extracts text from images with extreme precision." }
+          ].map((f, i) => (
+            <div key={i} className="bg-slate-900/40 border border-slate-800/60 p-10 rounded-[2.5rem] hover:bg-slate-900/60 transition-colors">
+              <div className={`w-12 h-12 rounded-2xl bg-${f.color}-500/10 flex items-center justify-center mb-6 border border-${f.color}-500/20`}>
+                <f.icon className={`w-6 h-6 text-${f.color}-400`} />
+              </div>
+              <h3 className="text-2xl font-black mb-4">{f.title}</h3>
+              <p className="text-slate-400 leading-relaxed font-medium">{f.desc}</p>
             </div>
-            <h3 className="text-2xl font-bold mb-4">AI-Powered Summaries</h3>
-            <p className="text-slate-400 leading-relaxed">
-              Get instant, intelligent summaries of your recordings. Our AI extracts key
-              points and insights, saving you hours of review time.
-            </p>
-          </div>
-
-          <div className="bg-gradient-to-br from-slate-900/50 to-slate-800/50 border border-slate-700/50 rounded-3xl p-8 hover:border-purple-500/50 transition-all duration-300">
-            <div className="w-12 h-12 bg-purple-500/10 rounded-2xl flex items-center justify-center mb-6 border border-purple-500/20">
-              <CheckSquare className="w-6 h-6 text-purple-400" />
-            </div>
-            <h3 className="text-2xl font-bold mb-4">Checklist Focus Mode</h3>
-            <p className="text-slate-400 leading-relaxed">
-              Automatically generate actionable checklists from your notes. Stay organized
-              and never miss a follow-up task.
-            </p>
-          </div>
-
-          <div className="bg-gradient-to-br from-slate-900/50 to-slate-800/50 border border-slate-700/50 rounded-3xl p-8 hover:border-emerald-500/50 transition-all duration-300">
-            <div className="w-12 h-12 bg-emerald-500/10 rounded-2xl flex items-center justify-center mb-6 border border-emerald-500/20">
-              <Mic className="w-6 h-6 text-emerald-400" />
-            </div>
-            <h3 className="text-2xl font-bold mb-4">High-Fidelity Audio Capture</h3>
-            <p className="text-slate-400 leading-relaxed">
-              Record crystal-clear audio with advanced noise reduction. Perfect for
-              meetings, lectures, interviews, and personal notes.
-            </p>
-          </div>
-
-          <div className="bg-gradient-to-br from-slate-900/50 to-slate-800/50 border border-slate-700/50 rounded-3xl p-8 hover:border-cyan-500/50 transition-all duration-300">
-            <div className="w-12 h-12 bg-cyan-500/10 rounded-2xl flex items-center justify-center mb-6 border border-cyan-500/20">
-              <Image className="w-6 h-6 text-cyan-400" />
-            </div>
-            <h3 className="text-2xl font-bold mb-4">Image to Text</h3>
-            <p className="text-slate-400 leading-relaxed">
-              Image to Text
-              Description
-            </p>
-          </div>
+          ))}
         </div>
       </section>
 
-<footer className="border-t border-slate-800/50 mt-24">
-  <div className="max-w-7xl mx-auto px-6 py-12">
-    <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-      <div className="flex items-center gap-2">
-        {/* White Circle Logo Container */}
-        <div className="h-9 w-9 bg-white rounded-full flex items-center justify-center p-1">
-        <img 
-          src="/assets/logo-notecompass.png" 
-          alt="NoteCompass AI Logo" 
-          className="w-full h-full object-contain" 
-        />
+      <footer className="border-t border-slate-900 py-16">
+        <div className="max-w-5xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-8">
+          <div className="flex items-center gap-4">
+            <div className="w-8 h-8 bg-white p-1.5 rounded-lg">
+              <img src="/assets/logo-notecompass.png" alt="NoteCompass" className="w-full h-full object-contain" />
+            </div>
+            <span className="text-xs font-black uppercase tracking-widest text-slate-500">A Product of Enchanted Systems</span>
+          </div>
+          <div className="flex gap-6 text-[10px] font-black uppercase tracking-[0.2em] text-slate-500">
+            <Link to="/notecompass/privacy" className="hover:text-blue-500 transition-colors">Privacy</Link>
+            <Link to="/notecompass/terms" className="hover:text-blue-500 transition-colors">Terms</Link>
+          </div>
         </div>
-        <span className="text-slate-600 mx-2">•</span>
-        <span className="text-slate-400 text-sm">by Enchanted Systems AI Ltd</span>
-      </div>
-      <div className="flex items-center gap-6">
-        <Link
-          to="/notecompass/privacy"
-          className="text-sm text-slate-400 hover:text-white transition-colors"
-        >
-          Privacy Policy
-        </Link>
-        <Link
-          to="/notecompass/terms"
-          className="text-sm text-slate-400 hover:text-white transition-colors"
-        >
-          Terms of Service
-        </Link>
-      </div>
-    </div>
-  </div>
-</footer>
+      </footer>
     </div>
   );
 }
