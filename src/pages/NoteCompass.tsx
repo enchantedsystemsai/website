@@ -114,7 +114,7 @@ export default function NoteCompass() {
             <Link to="/notecompass/terms" className="hover:text-blue-500 transition-colors">Terms</Link>
           </div>
         </div>
-      </footer>>
+      </footer>
     </div>
   );
 }
