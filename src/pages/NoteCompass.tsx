@@ -27,7 +27,7 @@ export default function NoteCompass() {
           <div className="grid lg:grid-cols-2 gap-20 items-center">
             <div>
               <div className="inline-flex items-center gap-2 mb-8 px-4 py-1.5 bg-blue-500/10 border border-blue-500/20 rounded-full text-blue-400 text-xs font-black uppercase tracking-widest">
-                <Sparkles className="w-3 h-3" /> Live on All Platforms
+                <Sparkles className="w-3 h-3" /> Coming Soon
               </div>
               <h1 className="text-6xl md:text-7xl font-black mb-8 leading-[0.9] tracking-tighter">
                 NoteCompass <span className="text-blue-500">AI</span>
