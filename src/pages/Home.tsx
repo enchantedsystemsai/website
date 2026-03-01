@@ -1,93 +1,104 @@
 import { Link } from 'react-router-dom';
-import { Package, ArrowRight } from 'lucide-react';
+import { Package, ArrowRight, Zap, Shield, Sparkles } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 export default function Home() {
-  return (
-    <div className="min-h-screen bg-slate-950 text-slate-100 selection:bg-blue-500/30">
-{/* Navigation */}
-<nav className="border-b border-slate-800/60 sticky top-0 z-50 bg-slate-950/80 backdrop-blur-md">
-  <div className="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
+  const fadeInUp = {
+    initial: { opacity: 0, y: 20 },
+    animate: { opacity: 1, y: 0 },
+    transition: { duration: 0.6 }
+  };
 
-    <Link 
-      to="/" 
-      className="flex items-center gap-3 group"
-    >
-      {/* Logo in a white circle */}
-      <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center p-1.5 shadow-md transition-colors group-hover:bg-blue-100">
-        <img 
-          src="/assets/EnchantedSystems_nobackground.png" 
-          alt="Enchanted Systems Logo" 
-          className="w-full h-full object-contain" 
-        />
+  return (
+    <div className="min-h-screen bg-slate-950 text-slate-100 selection:bg-blue-500/30 overflow-x-hidden">
+      {/* Background Decor */}
+      <div className="fixed inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute -top-[10%] -left-[10%] w-[40%] h-[40%] bg-blue-500/10 blur-[120px] rounded-full" />
+        <div className="absolute top-[20%] -right-[5%] w-[30%] h-[30%] bg-indigo-500/10 blur-[100px] rounded-full" />
       </div>
 
-      <span className="text-lg font-bold tracking-tight">
-        Enchanted Systems AI Ltd
-      </span>
-    </Link>
+      <nav className="border-b border-slate-800/60 sticky top-0 z-50 bg-slate-950/80 backdrop-blur-md">
+        <div className="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
+          <Link to="/" className="flex items-center gap-3 group">
+            <div className="w-10 h-10 bg-white rounded-xl flex items-center justify-center p-1.5 shadow-xl transition-all group-hover:scale-105 group-hover:rotate-3">
+              <img src="/assets/EnchantedSystems_nobackground.png" alt="Logo" className="w-full h-full object-contain" />
+            </div>
+            <span className="text-lg font-black tracking-tight bg-gradient-to-r from-white to-slate-400 bg-clip-text text-transparent">
+              Enchanted Systems
+            </span>
+          </Link>
+          <Link to="/privacy" className="text-sm font-bold text-slate-400 hover:text-white transition-colors">
+            Studio Policy
+          </Link>
+        </div>
+      </nav>
 
-    <div className="flex items-center gap-6 text-sm">
-      <Link 
-        to="/privacy" 
-        className="text-slate-400 hover:text-white transition-colors"
-      >
-        Studio Policy
-      </Link>
-    </div>
-
-  </div>
-</nav>
-
-
-      {/* Hero Section */}
-      <section className="max-w-5xl mx-auto px-6 pt-24 pb-32">
-        <h1 className="text-5xl md:text-6xl font-extrabold tracking-tighter mb-6">
-          Precision tools for<br />
-          <span className="text-blue-500">the modern era.</span>
-        </h1>
-        <p className="text-xl text-slate-400 max-w-xl leading-relaxed">
-          Enchanted Systems AI Ltd is a boutique software studio dedicated to building high-fidelity productivity tools that work exactly as expected.
-        </p>
+      <section className="max-w-5xl mx-auto px-6 pt-32 pb-40">
+        <motion.div {...fadeInUp}>
+          <h1 className="text-6xl md:text-8xl font-black tracking-tighter mb-8 leading-[0.9]">
+            Precision tools for<br />
+            <span className="text-blue-500">the modern era.</span>
+          </h1>
+          <p className="text-xl text-slate-400 max-w-xl leading-relaxed font-medium">
+            Enchanted Systems AI Ltd is a boutique software studio dedicated to building high-fidelity productivity tools that work exactly as expected.
+          </p>
+        </motion.div>
       </section>
 
-      {/* Product Catalog */}
-      <section className="max-w-5xl mx-auto px-6 pb-32">
-        <div className="flex items-center gap-2 text-sm font-semibold text-blue-500 uppercase tracking-widest mb-12">
+      {/* Studio Values */}
+      <section className="max-w-5xl mx-auto px-6 pb-40">
+        <div className="grid md:grid-cols-3 gap-12">
+          {[
+            { icon: Zap, title: "Performance First", desc: "Native-feel experiences built with modern efficiency." },
+            { icon: Shield, title: "Privacy Minded", desc: "Your data stays yours, secured with industry-standard encryption." },
+            { icon: Sparkles, title: "AI Augmented", desc: "Leveraging intelligence to remove friction, not replace thought." }
+          ].map((v, i) => (
+            <motion.div key={i} initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ delay: i * 0.1 }}>
+              <v.icon className="w-6 h-6 text-blue-500 mb-4" />
+              <h4 className="font-bold text-white mb-2">{v.title}</h4>
+              <p className="text-sm text-slate-400 leading-relaxed font-medium">{v.desc}</p>
+            </motion.div>
+          ))}
+        </div>
+      </section>
+
+      <section className="max-w-5xl mx-auto px-6 pb-40">
+        <div className="flex items-center gap-2 text-[11px] font-black text-blue-500 uppercase tracking-[0.2em] mb-12">
           <Package className="w-4 h-4" /> Current Projects
         </div>
         
-        <div className="grid gap-6">
-          {/* NoteCompass AI Card */}
-          <div className="group bg-slate-900 border border-slate-800 rounded-2xl p-8 hover:border-slate-600 transition-all">
-            <div className="flex flex-col md:flex-row md:items-start gap-6 mb-6">
-              <img src="/assets/NoteCompass_whitebackground.png" alt="NoteCompass AI Logo" className="w-16 h-16 rounded-xl object-contain bg-slate-800" />
-              <div className="flex-grow">
-                <h3 className="text-2xl font-bold mb-2">NoteCompass AI</h3>
-                <span className="text-sm bg-blue-500/10 text-blue-400 px-3 py-1 rounded-full border border-blue-500/20">Productivity / AI</span>
+        <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
+          <div className="group bg-slate-900/40 border border-slate-800/60 rounded-[2.5rem] p-10 hover:border-blue-500/40 transition-all backdrop-blur-sm shadow-2xl">
+            <div className="flex flex-col md:flex-row md:items-start gap-8">
+              <div className="w-20 h-20 rounded-[1.8rem] bg-white p-3 shadow-2xl flex-shrink-0 group-hover:scale-110 transition-transform">
+                <img src="/assets/NoteCompass_whitebackground.png" alt="NoteCompass" className="w-full h-full object-contain" />
               </div>
-              <Link 
-                to="/notecompass"
-                className="bg-white text-slate-950 px-4 py-2 rounded-lg font-bold text-sm flex items-center gap-2 hover:bg-slate-200 transition-colors"
-              >
-                View App <ArrowRight className="w-4 h-4" />
-              </Link>
+              <div className="flex-grow">
+                <div className="flex flex-wrap items-center gap-3 mb-4">
+                  <h3 className="text-3xl font-black">NoteCompass AI</h3>
+                  <span className="text-[10px] font-black bg-blue-500/10 text-blue-400 px-3 py-1 rounded-full border border-blue-500/20 uppercase tracking-widest">Active Beta</span>
+                </div>
+                <p className="text-slate-400 text-lg max-w-2xl leading-relaxed font-medium mb-8">
+                  A high-fidelity audio note-taker that bridges the gap between thoughts and action. Built for professionals who need structured intelligence from every meeting.
+                </p>
+                <Link to="/notecompass" className="inline-flex items-center gap-3 bg-white text-slate-950 px-6 py-3 rounded-full font-black text-xs uppercase tracking-widest hover:bg-blue-50 transition-all shadow-lg hover:shadow-blue-500/20">
+                  Explore App <ArrowRight className="w-4 h-4" />
+                </Link>
+              </div>
             </div>
-            <p className="text-slate-400 max-w-2xl leading-relaxed">
-              A high-fidelity audio note-taker that bridges the gap between thoughts and action. Built for professionals who need structured intelligence from every meeting.
-            </p>
           </div>
-        </div>
+        </motion.div>
       </section>
 
-      {/* Footer */}
-      <footer className="border-t border-slate-900/60 py-12">
-        <div className="max-w-5xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
-          <p className="text-slate-500 text-sm font-medium">
-            © 2026 Enchanted Systems AI Ltd.
-          </p>
-          <div className="flex gap-8 text-sm text-slate-500">
-            <a href="mailto:enchantedsys@gmail.com" className="hover:text-white transition-colors">Support</a>
-            <Link to="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link>
+      <footer className="border-t border-slate-900 py-16">
+        <div className="max-w-5xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-8">
+          <div className="flex flex-col items-center md:items-start gap-2">
+            <p className="text-slate-200 text-sm font-black">© 2026 Enchanted Systems AI Ltd.</p>
+            <p className="text-slate-500 text-[10px] uppercase font-black tracking-widest">Registered in England & Wales</p>
+          </div>
+          <div className="flex gap-8 text-xs font-black uppercase tracking-widest text-slate-500">
+            <a href="mailto:enchantedsys@gmail.com" className="hover:text-blue-500 transition-colors">Support</a>
+            <Link to="/privacy" className="hover:text-blue-500 transition-colors">Studio Policy</Link>
           </div>
         </div>
       </footer>
