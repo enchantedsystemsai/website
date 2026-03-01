@@ -49,7 +49,7 @@ export default function Home() {
               <div className="flex flex-wrap items-center justify-between gap-4 mb-4">
                 <div className="flex flex-wrap items-center gap-3">
                   <h3 className="text-3xl font-black">NoteCompass AI</h3>
-                  <span className="text-[10px] font-black bg-blue-500/10 text-blue-400 px-3 py-1 rounded-full border border-blue-500/20 uppercase tracking-widest">Live Now</span>
+                  <span className="text-[10px] font-black bg-blue-500/10 text-blue-400 px-3 py-1 rounded-full border border-blue-500/20 uppercase tracking-widest">Coming Soon</span>
                 </div>
                 <Link to="/notecompass" className="text-xs font-black text-blue-500 hover:text-blue-400 flex items-center gap-1 uppercase tracking-widest">
                   Project Details <ArrowRight className="w-3 h-3" />
