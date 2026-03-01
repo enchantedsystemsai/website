@@ -93,17 +93,28 @@ export default function NoteCompass() {
         </div>
       </section>
 
-      <footer className="border-t border-slate-900 py-16">
+<footer className="border-t border-slate-900 py-16">
         <div className="max-w-5xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-8">
           <div className="flex items-center gap-4">
-            <span className="text-xs font-black uppercase tracking-widest text-slate-500">A Product of Enchanted Systems</span>
+            {/* Re-added the NoteCompass Logo */}
+            <div className="w-8 h-8 bg-white rounded-lg flex items-center justify-center p-1 shadow-lg">
+              <img 
+                src="/assets/NoteCompass_whitebackground.png" 
+                alt="NoteCompass Logo" 
+                className="w-full h-full object-contain" 
+              />
+            </div>
+            <div className="flex flex-col">
+              <span className="text-[10px] font-black uppercase tracking-widest text-white">NoteCompass AI</span>
+              <span className="text-[10px] font-bold uppercase tracking-widest text-slate-500">A Product of Enchanted Systems</span>
+            </div>
           </div>
           <div className="flex gap-6 text-[10px] font-black uppercase tracking-[0.2em] text-slate-500">
             <Link to="/notecompass/privacy" className="hover:text-blue-500 transition-colors">Privacy</Link>
             <Link to="/notecompass/terms" className="hover:text-blue-500 transition-colors">Terms</Link>
           </div>
         </div>
-      </footer>
+      </footer>>
     </div>
   );
 }
