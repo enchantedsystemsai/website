@@ -27,7 +27,7 @@ export default function NoteCompass() {
           <div className="grid lg:grid-cols-2 gap-20 items-center">
             <div>
               <div className="inline-flex items-center gap-2 mb-8 px-4 py-1.5 bg-blue-500/10 border border-blue-500/20 rounded-full text-blue-400 text-xs font-black uppercase tracking-widest">
-                <Sparkles className="w-3 h-3" /> Now in Public Beta
+                <Sparkles className="w-3 h-3" /> Live on All Platforms
               </div>
               <h1 className="text-6xl md:text-7xl font-black mb-8 leading-[0.9] tracking-tighter">
                 NoteCompass <span className="text-blue-500">AI</span>
@@ -36,18 +36,15 @@ export default function NoteCompass() {
                 Transforming Audio into Actionable Insights. Record, transcribe, and organize your thoughts with high-fidelity intelligence.
               </p>
               
-              {/* Dual Store Buttons */}
+              {/* Both Store Buttons now Active */}
               <div className="flex flex-wrap gap-4">
-                <button className="px-8 py-4 bg-blue-600 hover:bg-blue-500 rounded-2xl font-black text-[11px] uppercase tracking-[0.15em] transition-all shadow-xl shadow-blue-500/20 flex items-center justify-center gap-3">
+                <button className="px-8 py-4 bg-blue-600 hover:bg-blue-500 text-white rounded-2xl font-black text-[11px] uppercase tracking-[0.15em] transition-all shadow-xl shadow-blue-500/20 flex items-center justify-center gap-3 active:scale-95">
                   <Play className="w-5 h-5 fill-current" /> Google Play
                 </button>
-                <button className="px-8 py-4 bg-slate-900 border border-slate-800 text-slate-400 rounded-2xl font-black text-[11px] uppercase tracking-[0.15em] flex items-center justify-center gap-3 cursor-not-allowed">
+                <button className="px-8 py-4 bg-white text-slate-950 hover:bg-blue-50 rounded-2xl font-black text-[11px] uppercase tracking-[0.15em] flex items-center justify-center gap-3 transition-all shadow-xl active:scale-95">
                   <Apple className="w-5 h-5 fill-current" /> App Store
                 </button>
               </div>
-              <p className="mt-6 text-[10px] font-bold text-slate-500 uppercase tracking-widest ml-1">
-                iOS Version Coming Q3 2026
-              </p>
             </div>
 
             <div className="relative flex justify-center lg:justify-end">
