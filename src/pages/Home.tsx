@@ -35,23 +35,6 @@ export default function Home() {
         </p>
       </section>
 
-      {/* Studio Values */}
-      <section className="max-w-5xl mx-auto px-6 pb-40">
-        <div className="grid md:grid-cols-3 gap-12 text-center md:text-left">
-          {[
-            { icon: Zap, title: "Performance First", desc: "Native-feel experiences built with modern efficiency." },
-            { icon: Shield, title: "Privacy Minded", desc: "Your data stays yours, secured with industry-standard encryption." },
-            { icon: Sparkles, title: "AI Augmented", desc: "Leveraging intelligence to remove friction, not replace thought." }
-          ].map((v, i) => (
-            <div key={i}>
-              <v.icon className="w-6 h-6 text-blue-500 mb-4 mx-auto md:mx-0" />
-              <h4 className="font-bold text-white mb-2">{v.title}</h4>
-              <p className="text-sm text-slate-400 leading-relaxed font-medium">{v.desc}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-
       <section className="max-w-5xl mx-auto px-6 pb-40">
         <div className="flex items-center gap-2 text-[11px] font-black text-blue-500 uppercase tracking-[0.2em] mb-12">
           <Package className="w-4 h-4" /> Current Projects
@@ -66,7 +49,7 @@ export default function Home() {
               <div className="flex flex-wrap items-center justify-between gap-4 mb-4">
                 <div className="flex flex-wrap items-center gap-3">
                   <h3 className="text-3xl font-black">NoteCompass AI</h3>
-                  <span className="text-[10px] font-black bg-blue-500/10 text-blue-400 px-3 py-1 rounded-full border border-blue-500/20 uppercase tracking-widest">Active Beta</span>
+                  <span className="text-[10px] font-black bg-blue-500/10 text-blue-400 px-3 py-1 rounded-full border border-blue-500/20 uppercase tracking-widest">Live Now</span>
                 </div>
                 <Link to="/notecompass" className="text-xs font-black text-blue-500 hover:text-blue-400 flex items-center gap-1 uppercase tracking-widest">
                   Project Details <ArrowRight className="w-3 h-3" />
@@ -77,12 +60,12 @@ export default function Home() {
                 A high-fidelity audio note-taker that bridges the gap between thoughts and action. Built for professionals who need structured intelligence from every meeting.
               </p>
 
-              {/* Store Buttons Group */}
+              {/* Both Store Buttons now Active */}
               <div className="flex flex-wrap gap-4">
-                <button className="flex items-center gap-3 bg-white text-slate-950 px-6 py-3 rounded-2xl font-black text-[10px] uppercase tracking-widest hover:bg-blue-50 transition-all shadow-lg">
+                <button className="flex items-center gap-3 bg-white text-slate-950 px-6 py-3 rounded-2xl font-black text-[10px] uppercase tracking-widest hover:bg-blue-50 transition-all shadow-lg active:scale-95">
                   <Play className="w-4 h-4 fill-current" /> Google Play
                 </button>
-                <button className="flex items-center gap-3 bg-slate-800 text-slate-300 px-6 py-3 rounded-2xl font-black text-[10px] uppercase tracking-widest cursor-not-allowed opacity-60">
+                <button className="flex items-center gap-3 bg-white text-slate-950 px-6 py-3 rounded-2xl font-black text-[10px] uppercase tracking-widest hover:bg-blue-50 transition-all shadow-lg active:scale-95">
                   <Apple className="w-4 h-4 fill-current" /> App Store
                 </button>
               </div>
